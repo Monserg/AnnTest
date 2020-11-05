@@ -1,0 +1,41 @@
+Create an iOS application that does the following things:
+Создайте iOS приложение, которое выполняет следующие функции:
+
+General (Основное):
+1.  Downloads a list of images (https://picsum.photos/v2/list)
+    Скачайте список изображений (https://picsum.photos/v2/list)
+
+2.  Displays the list of authors in a tableview (for the purpose of this, it doesn't matter that the authors names have duplicates in the table)
+    Отобразите список авторов в виде таблицы (не имеет значения, что имена авторов дублируются)
+
+3.  You can click on the table cell and it pushes to a new screen and shows the image there
+    При выборе ячейки таблицы изображение из её содержимого должно отобразиться на отдельном экране
+
+Presistance (На что обратить внимание):
+1.  Have a navigation bar with a button that opens a new screen
+    Добавить на панель навигации кнопку, которая открывает новый экран.
+
+2.  This screen should have a single textfield.
+    На этом экране должно быть одно текстовое поле.
+
+3.  The textfield should at start be empty but when you finish editing it should save the value in UserDefaults
+    Текстовое поле вначале должно быть пустым, но когда вы закончите редактирование, оно должно сохранить значение в UserDefaults.
+
+4.  Upon app relaunch and visiting that screen again - the value that was saved should be visible in the textfield.
+    После перезапуска приложения и повторного посещения этого экрана в текстовом поле должно отобразиться сохраненное значение.
+
+The app should use the following principles:
+1.  Use MVVM structure
+    Используйте архитектуру MVVM
+
+2.  Use "Combine" to communicate between modules.
+    Используйте "Combine" для связи между модулями.
+
+3.  Use Storyboards for the UI
+    Используйте раскадровки при создании UI
+
+4.  Don't use any external libraries
+    Не используйте внешние библиотеки.
+
+Please upload the project to GitHub & send us the link to it.
+Загрузите проект на GitHub и отправьте нам ссылку на него.
