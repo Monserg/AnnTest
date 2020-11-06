@@ -18,6 +18,11 @@
 		B1A4EF492554825B0051E2CB /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A4EF482554825B0051E2CB /* StoreViewController.swift */; };
 		B1A4EF4E255484640051E2CB /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A4EF4D255484640051E2CB /* UIViewController+Extensions.swift */; };
 		B1A4EF53255485290051E2CB /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A4EF52255485290051E2CB /* Store.swift */; };
+		B1A4EF5C2554FA7F0051E2CB /* Responces.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A4EF5B2554FA7F0051E2CB /* Responces.swift */; };
+		B1A4EF5F2554FBA00051E2CB /* Decodable+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A4EF5E2554FBA00051E2CB /* Decodable+Extensions.swift */; };
+		B1A4EF622554FBD00051E2CB /* items.json in Resources */ = {isa = PBXBuildFile; fileRef = B1A4EF612554FBD00051E2CB /* items.json */; };
+		B1A4EF662555030B0051E2CB /* PreviewImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A4EF652555030B0051E2CB /* PreviewImageViewController.swift */; };
+		B1A4EF69255503390051E2CB /* PreviewImage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1A4EF68255503390051E2CB /* PreviewImage.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +39,11 @@
 		B1A4EF482554825B0051E2CB /* StoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
 		B1A4EF4D255484640051E2CB /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		B1A4EF52255485290051E2CB /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		B1A4EF5B2554FA7F0051E2CB /* Responces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Responces.swift; sourceTree = "<group>"; };
+		B1A4EF5E2554FBA00051E2CB /* Decodable+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decodable+Extensions.swift"; sourceTree = "<group>"; };
+		B1A4EF612554FBD00051E2CB /* items.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = items.json; sourceTree = "<group>"; };
+		B1A4EF652555030B0051E2CB /* PreviewImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewImageViewController.swift; sourceTree = "<group>"; };
+		B1A4EF68255503390051E2CB /* PreviewImage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PreviewImage.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +84,7 @@
 				B1A4EF2A2554780B0051E2CB /* SceneDelegate.swift */,
 				B1A4EF312554780E0051E2CB /* Assets.xcassets */,
 				B1A4EF362554780E0051E2CB /* Info.plist */,
+				B1A4EF612554FBD00051E2CB /* items.json */,
 			);
 			path = AnnTest;
 			sourceTree = "<group>";
@@ -83,6 +94,7 @@
 			children = (
 				B1A4EF2E2554780B0051E2CB /* Main.storyboard */,
 				B1A4EF452554824B0051E2CB /* Store.storyboard */,
+				B1A4EF68255503390051E2CB /* PreviewImage.storyboard */,
 				B1A4EF332554780E0051E2CB /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
@@ -92,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				B1A4EF2C2554780B0051E2CB /* MainViewController.swift */,
+				B1A4EF652555030B0051E2CB /* PreviewImageViewController.swift */,
 				B1A4EF482554825B0051E2CB /* StoreViewController.swift */,
 			);
 			path = Scenes;
@@ -100,6 +113,7 @@
 		B1A4EF4B255484480051E2CB /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				B1A4EF562554F9510051E2CB /* Models */,
 				B1A4EF4C255484530051E2CB /* Extensions */,
 				B1A4EF51255484E20051E2CB /* Managers */,
 			);
@@ -110,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				B1A4EF4D255484640051E2CB /* UIViewController+Extensions.swift */,
+				B1A4EF5E2554FBA00051E2CB /* Decodable+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -120,6 +135,14 @@
 				B1A4EF52255485290051E2CB /* Store.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		B1A4EF562554F9510051E2CB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B1A4EF5B2554FA7F0051E2CB /* Responces.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,7 +203,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1A4EF352554780E0051E2CB /* LaunchScreen.storyboard in Resources */,
+				B1A4EF69255503390051E2CB /* PreviewImage.storyboard in Resources */,
 				B1A4EF322554780E0051E2CB /* Assets.xcassets in Resources */,
+				B1A4EF622554FBD00051E2CB /* items.json in Resources */,
 				B1A4EF462554824B0051E2CB /* Store.storyboard in Resources */,
 				B1A4EF302554780B0051E2CB /* Main.storyboard in Resources */,
 				B1A4EF3E255478580051E2CB /* Task in Resources */,
@@ -197,6 +222,9 @@
 				B1A4EF492554825B0051E2CB /* StoreViewController.swift in Sources */,
 				B1A4EF2D2554780B0051E2CB /* MainViewController.swift in Sources */,
 				B1A4EF4E255484640051E2CB /* UIViewController+Extensions.swift in Sources */,
+				B1A4EF5F2554FBA00051E2CB /* Decodable+Extensions.swift in Sources */,
+				B1A4EF5C2554FA7F0051E2CB /* Responces.swift in Sources */,
+				B1A4EF662555030B0051E2CB /* PreviewImageViewController.swift in Sources */,
 				B1A4EF53255485290051E2CB /* Store.swift in Sources */,
 				B1A4EF292554780B0051E2CB /* AppDelegate.swift in Sources */,
 				B1A4EF2B2554780B0051E2CB /* SceneDelegate.swift in Sources */,
