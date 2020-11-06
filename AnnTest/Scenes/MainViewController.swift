@@ -28,7 +28,9 @@ class MainViewController: UITableViewController {
     
     // MARK: - Custom functions
     func loadData() {
-        items = [Photographer].parse(jsonFile: "items")
+        if let photographers = [Photographer].parse(jsonFile: "items") {
+            items = photographers.sorted { $0.author < $1.author }
+        }
     }
 }
 

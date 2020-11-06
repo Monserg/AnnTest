@@ -92,10 +92,10 @@
 		B1A4EF402554810B0051E2CB /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				B1A4EF2E2554780B0051E2CB /* Main.storyboard */,
-				B1A4EF452554824B0051E2CB /* Store.storyboard */,
-				B1A4EF68255503390051E2CB /* PreviewImage.storyboard */,
 				B1A4EF332554780E0051E2CB /* LaunchScreen.storyboard */,
+				B1A4EF2E2554780B0051E2CB /* Main.storyboard */,
+				B1A4EF68255503390051E2CB /* PreviewImage.storyboard */,
+				B1A4EF452554824B0051E2CB /* Store.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
