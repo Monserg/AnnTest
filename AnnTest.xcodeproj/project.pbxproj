@@ -23,6 +23,8 @@
 		B1A4EF622554FBD00051E2CB /* items.json in Resources */ = {isa = PBXBuildFile; fileRef = B1A4EF612554FBD00051E2CB /* items.json */; };
 		B1A4EF662555030B0051E2CB /* PreviewImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A4EF652555030B0051E2CB /* PreviewImageViewController.swift */; };
 		B1A4EF69255503390051E2CB /* PreviewImage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1A4EF68255503390051E2CB /* PreviewImage.storyboard */; };
+		B1BDFF7B255644BA00D057CE /* NeyworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BDFF7A255644BA00D057CE /* NeyworkManager.swift */; };
+		B1BDFF7F25564F2600D057CE /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BDFF7E25564F2600D057CE /* UIImageView+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		B1A4EF612554FBD00051E2CB /* items.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = items.json; sourceTree = "<group>"; };
 		B1A4EF652555030B0051E2CB /* PreviewImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewImageViewController.swift; sourceTree = "<group>"; };
 		B1A4EF68255503390051E2CB /* PreviewImage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PreviewImage.storyboard; sourceTree = "<group>"; };
+		B1BDFF7A255644BA00D057CE /* NeyworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeyworkManager.swift; sourceTree = "<group>"; };
+		B1BDFF7E25564F2600D057CE /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,8 +127,9 @@
 		B1A4EF4C255484530051E2CB /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				B1A4EF4D255484640051E2CB /* UIViewController+Extensions.swift */,
 				B1A4EF5E2554FBA00051E2CB /* Decodable+Extensions.swift */,
+				B1BDFF7E25564F2600D057CE /* UIImageView+Extensions.swift */,
+				B1A4EF4D255484640051E2CB /* UIViewController+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -133,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				B1A4EF52255485290051E2CB /* Store.swift */,
+				B1BDFF7A255644BA00D057CE /* NeyworkManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -221,6 +227,7 @@
 			files = (
 				B1A4EF492554825B0051E2CB /* StoreViewController.swift in Sources */,
 				B1A4EF2D2554780B0051E2CB /* MainViewController.swift in Sources */,
+				B1BDFF7F25564F2600D057CE /* UIImageView+Extensions.swift in Sources */,
 				B1A4EF4E255484640051E2CB /* UIViewController+Extensions.swift in Sources */,
 				B1A4EF5F2554FBA00051E2CB /* Decodable+Extensions.swift in Sources */,
 				B1A4EF5C2554FA7F0051E2CB /* Responces.swift in Sources */,
@@ -228,6 +235,7 @@
 				B1A4EF53255485290051E2CB /* Store.swift in Sources */,
 				B1A4EF292554780B0051E2CB /* AppDelegate.swift in Sources */,
 				B1A4EF2B2554780B0051E2CB /* SceneDelegate.swift in Sources */,
+				B1BDFF7B255644BA00D057CE /* NeyworkManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="rm7-0i-4F7">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rm7-0i-4F7">
                                 <rect key="frame" x="10" y="54" width="394" height="798"/>
                             </imageView>
                         </subviews>
@@ -29,6 +29,9 @@
                             <constraint firstItem="6hW-Du-Vdt" firstAttribute="bottom" secondItem="rm7-0i-4F7" secondAttribute="bottom" constant="10" id="tZP-Tp-YQn"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="rm7-0i-4F7" id="vDx-Ab-C6w"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lrO-Tv-a9y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -36,7 +39,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="1" width="1872" height="1248"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

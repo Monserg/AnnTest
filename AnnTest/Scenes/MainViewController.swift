@@ -9,16 +9,16 @@ import UIKit
 
 class MainViewController: UITableViewController {
     // MARK: - Properties
-    var items: [Photographer]?
+    var items: [Photographer]!
     
     
     // MARK: - IBOutlets
-
+    
     
     // MARK: - Class functions
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         hideBackButtonTitle()
         title = "Main"
         
@@ -27,9 +27,26 @@ class MainViewController: UITableViewController {
     
     
     // MARK: - Custom functions
-    func loadData() {
-        if let photographers = [Photographer].parse(jsonFile: "items") {
-            items = photographers.sorted { $0.author < $1.author }
+    private func loadData() {
+        NetworkManager().getPhotographersCountries() { [weak self] (result, errorDescription) in
+            guard errorDescription == nil else { return }
+            guard let self = self, let items = result as? [Photographer] else { return }
+            
+            self.items = items.sorted { $0.author < $1.author }
+            
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+    }
+    
+    
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showPreviewImageVC",
+           let previewImageVC = segue.destination as? PreviewImageViewController,
+           let indexPath = tableView.indexPathForSelectedRow {
+            previewImageVC.download_url = items[indexPath.row].download_url
         }
     }
 }

@@ -8,10 +8,19 @@
 import UIKit
 
 class PreviewImageViewController: UIViewController {
+    // MARK: - Properties
+    var download_url: String!
+    
+    
+    // MARK: - IBOutlets
+    @IBOutlet weak var imageView: UIImageView!
+    
+    
     // MARK: - Class functions
     override func viewDidLoad() {
         super.viewDidLoad()
 
         title = "Image preview"
+        imageView.downloadImage(byURL: download_url)
     }
 }
