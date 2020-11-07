@@ -31,4 +31,9 @@ class MainViewModel: MainViewModelType {
         guard let items = photographers else { return nil }
         return items[indexPath.row].download_url
     }
+    
+    func cellViewModel(forIndexPath indexPath: IndexPath) -> CellViewModelType? {
+        guard let items = photographers else { return nil }
+        return CellViewModel(photographer: items[indexPath.row])
+    }
 }

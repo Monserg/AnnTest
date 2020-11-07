@@ -9,7 +9,7 @@ import UIKit
 
 class MainViewController: UITableViewController {
     // MARK: - Properties
-    let mainViewModel = MainViewModel()
+    private let mainViewModel = MainViewModel()
     
     
     // MARK: - Class functions
@@ -53,7 +53,8 @@ extension MainViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        cell.textLabel?.text = "row - " + "\(indexPath.row)" //items?[indexPath.row].author
+        let cellViewModel = mainViewModel.cellViewModel(forIndexPath: indexPath)
+        cell.textLabel?.text = cellViewModel?.author
         return cell
     }
 }
