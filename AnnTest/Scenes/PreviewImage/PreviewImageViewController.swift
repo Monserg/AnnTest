@@ -9,7 +9,7 @@ import UIKit
 
 class PreviewImageViewController: UIViewController {
     // MARK: - Properties
-    var download_url: String!
+    var previewImageViewModel: PreviewImageViewModelType!
     
     
     // MARK: - IBOutlets
@@ -20,7 +20,13 @@ class PreviewImageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        view.showLoading()
         title = "Image preview"
-        imageView.downloadImage(byURL: download_url)
+        
+        previewImageViewModel.downloadImage(completion: { [weak self] image in
+            guard let self = self else { return }
+            self.imageView.image = image
+            self.view.stopLoading()
+        })
     }
 }

@@ -38,8 +38,9 @@ class MainViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showPreviewImageVC",
            let previewImageVC = segue.destination as? PreviewImageViewController,
-           let indexPath = tableView.indexPathForSelectedRow {
-            previewImageVC.download_url = mainViewModel.download_url(byIndexPath: indexPath)
+           let indexPath = tableView.indexPathForSelectedRow,
+           let previewImageViewModel = mainViewModel.previewImageViewModel(forIndexPath: indexPath) {
+            previewImageVC.previewImageViewModel = previewImageViewModel
         }
     }
 }

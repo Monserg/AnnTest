@@ -36,4 +36,9 @@ class MainViewModel: MainViewModelType {
         guard let items = photographers else { return nil }
         return CellViewModel(photographer: items[indexPath.row])
     }
+    
+    func previewImageViewModel(forIndexPath indexPath: IndexPath) -> PreviewImageViewModelType? {
+        guard let items = photographers else { return nil }
+        return PreviewImageViewModel(withURL: items[indexPath.row].download_url)
+    }
 }

@@ -29,8 +29,10 @@
 		B1B4076E2556F79D00636744 /* StoreViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B4076D2556F79D00636744 /* StoreViewModelType.swift */; };
 		B1B407742557000100636744 /* CellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B407732557000100636744 /* CellViewModel.swift */; };
 		B1B407772557002C00636744 /* CellViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B407762557002C00636744 /* CellViewModelType.swift */; };
+		B1B407822557057000636744 /* PreviewImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B407812557057000636744 /* PreviewImageViewModel.swift */; };
+		B1B407862557058600636744 /* PreviewImageViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B407852557058600636744 /* PreviewImageViewModelType.swift */; };
+		B1B4078B25570BCD00636744 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B4078A25570BCD00636744 /* UIView+Extensions.swift */; };
 		B1BDFF7B255644BA00D057CE /* NeyworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BDFF7A255644BA00D057CE /* NeyworkManager.swift */; };
-		B1BDFF7F25564F2600D057CE /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BDFF7E25564F2600D057CE /* UIImageView+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,8 +60,10 @@
 		B1B4076D2556F79D00636744 /* StoreViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewModelType.swift; sourceTree = "<group>"; };
 		B1B407732557000100636744 /* CellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellViewModel.swift; sourceTree = "<group>"; };
 		B1B407762557002C00636744 /* CellViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellViewModelType.swift; sourceTree = "<group>"; };
+		B1B407812557057000636744 /* PreviewImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewImageViewModel.swift; sourceTree = "<group>"; };
+		B1B407852557058600636744 /* PreviewImageViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewImageViewModelType.swift; sourceTree = "<group>"; };
+		B1B4078A25570BCD00636744 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		B1BDFF7A255644BA00D057CE /* NeyworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeyworkManager.swift; sourceTree = "<group>"; };
-		B1BDFF7E25564F2600D057CE /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,7 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				B1A4EF5E2554FBA00051E2CB /* Decodable+Extensions.swift */,
-				B1BDFF7E25564F2600D057CE /* UIImageView+Extensions.swift */,
+				B1B4078A25570BCD00636744 /* UIView+Extensions.swift */,
 				B1A4EF4D255484640051E2CB /* UIViewController+Extensions.swift */,
 			);
 			path = Extensions;
@@ -179,6 +183,7 @@
 			children = (
 				B1B407762557002C00636744 /* CellViewModelType.swift */,
 				B1B407612556EDEB00636744 /* MainViewModelType.swift */,
+				B1B407852557058600636744 /* PreviewImageViewModelType.swift */,
 				B1B4076D2556F79D00636744 /* StoreViewModelType.swift */,
 			);
 			path = Protocols;
@@ -196,6 +201,7 @@
 		B1B407682556F77900636744 /* PreviewImage */ = {
 			isa = PBXGroup;
 			children = (
+				B1B407812557057000636744 /* PreviewImageViewModel.swift */,
 				B1A4EF652555030B0051E2CB /* PreviewImageViewController.swift */,
 			);
 			path = PreviewImage;
@@ -278,20 +284,22 @@
 				B1B407742557000100636744 /* CellViewModel.swift in Sources */,
 				B1A4EF492554825B0051E2CB /* StoreViewController.swift in Sources */,
 				B1A4EF2D2554780B0051E2CB /* MainViewController.swift in Sources */,
-				B1BDFF7F25564F2600D057CE /* UIImageView+Extensions.swift in Sources */,
 				B1A4EF4E255484640051E2CB /* UIViewController+Extensions.swift in Sources */,
 				B1A4EF5F2554FBA00051E2CB /* Decodable+Extensions.swift in Sources */,
 				B1B4076E2556F79D00636744 /* StoreViewModelType.swift in Sources */,
 				B1A4EF5C2554FA7F0051E2CB /* Responces.swift in Sources */,
 				B1B407772557002C00636744 /* CellViewModelType.swift in Sources */,
+				B1B407822557057000636744 /* PreviewImageViewModel.swift in Sources */,
 				B1A4EF662555030B0051E2CB /* PreviewImageViewController.swift in Sources */,
 				B1A4EF53255485290051E2CB /* Store.swift in Sources */,
 				B1B4076B2556F79000636744 /* StoreViewModel.swift in Sources */,
+				B1B4078B25570BCD00636744 /* UIView+Extensions.swift in Sources */,
 				B1A4EF292554780B0051E2CB /* AppDelegate.swift in Sources */,
 				B1A4EF2B2554780B0051E2CB /* SceneDelegate.swift in Sources */,
 				B1BDFF7B255644BA00D057CE /* NeyworkManager.swift in Sources */,
 				B1B407622556EDEB00636744 /* MainViewModelType.swift in Sources */,
 				B1B4075D2556ED9100636744 /* MainViewModel.swift in Sources */,
+				B1B407862557058600636744 /* PreviewImageViewModelType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
