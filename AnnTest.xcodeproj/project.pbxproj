@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B19249FF25570F3B005C743E /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19249FE25570F3B005C743E /* Enums.swift */; };
 		B1A4EF292554780B0051E2CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A4EF282554780B0051E2CB /* AppDelegate.swift */; };
 		B1A4EF2B2554780B0051E2CB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A4EF2A2554780B0051E2CB /* SceneDelegate.swift */; };
 		B1A4EF2D2554780B0051E2CB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A4EF2C2554780B0051E2CB /* MainViewController.swift */; };
@@ -32,10 +33,12 @@
 		B1B407822557057000636744 /* PreviewImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B407812557057000636744 /* PreviewImageViewModel.swift */; };
 		B1B407862557058600636744 /* PreviewImageViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B407852557058600636744 /* PreviewImageViewModelType.swift */; };
 		B1B4078B25570BCD00636744 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B4078A25570BCD00636744 /* UIView+Extensions.swift */; };
+		B1B4078F25570D5B00636744 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B4078E25570D5B00636744 /* CustomTableViewCell.swift */; };
 		B1BDFF7B255644BA00D057CE /* NeyworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BDFF7A255644BA00D057CE /* NeyworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B19249FE25570F3B005C743E /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		B1A4EF252554780B0051E2CB /* AnnTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnnTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1A4EF282554780B0051E2CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B1A4EF2A2554780B0051E2CB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +66,7 @@
 		B1B407812557057000636744 /* PreviewImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewImageViewModel.swift; sourceTree = "<group>"; };
 		B1B407852557058600636744 /* PreviewImageViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewImageViewModelType.swift; sourceTree = "<group>"; };
 		B1B4078A25570BCD00636744 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		B1B4078E25570D5B00636744 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		B1BDFF7A255644BA00D057CE /* NeyworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeyworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -77,6 +81,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B19249FD25570F29005C743E /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				B19249FE25570F3B005C743E /* Enums.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
 		B1A4EF1C2554780B0051E2CB = {
 			isa = PBXGroup;
 			children = (
@@ -133,10 +145,11 @@
 		B1A4EF4B255484480051E2CB /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				B1B407602556EDD900636744 /* Protocols */,
-				B1A4EF562554F9510051E2CB /* Models */,
+				B19249FD25570F29005C743E /* Enums */,
 				B1A4EF4C255484530051E2CB /* Extensions */,
 				B1A4EF51255484E20051E2CB /* Managers */,
+				B1A4EF562554F9510051E2CB /* Models */,
+				B1B407602556EDD900636744 /* Protocols */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -174,6 +187,7 @@
 				B1B407732557000100636744 /* CellViewModel.swift */,
 				B1B4075C2556ED9100636744 /* MainViewModel.swift */,
 				B1A4EF2C2554780B0051E2CB /* MainViewController.swift */,
+				B1B4078E25570D5B00636744 /* CustomTableViewCell.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -285,8 +299,10 @@
 				B1A4EF492554825B0051E2CB /* StoreViewController.swift in Sources */,
 				B1A4EF2D2554780B0051E2CB /* MainViewController.swift in Sources */,
 				B1A4EF4E255484640051E2CB /* UIViewController+Extensions.swift in Sources */,
+				B19249FF25570F3B005C743E /* Enums.swift in Sources */,
 				B1A4EF5F2554FBA00051E2CB /* Decodable+Extensions.swift in Sources */,
 				B1B4076E2556F79D00636744 /* StoreViewModelType.swift in Sources */,
+				B1B4078F25570D5B00636744 /* CustomTableViewCell.swift in Sources */,
 				B1A4EF5C2554FA7F0051E2CB /* Responces.swift in Sources */,
 				B1B407772557002C00636744 /* CellViewModelType.swift in Sources */,
 				B1B407822557057000636744 /* PreviewImageViewModel.swift in Sources */,

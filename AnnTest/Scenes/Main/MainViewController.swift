@@ -53,9 +53,8 @@ extension MainViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        let cellViewModel = mainViewModel.cellViewModel(forIndexPath: indexPath)
-        cell.textLabel?.text = cellViewModel?.author
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: UITableViewCellIdentifier.customCell.rawValue, for: indexPath) as? CustomTableViewCell else { return UITableViewCell() }
+        cell.cellViewModel = mainViewModel.cellViewModel(forIndexPath: indexPath)
         return cell
     }
 }
