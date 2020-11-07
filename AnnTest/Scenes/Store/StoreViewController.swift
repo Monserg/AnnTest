@@ -8,6 +8,10 @@
 import UIKit
 
 class StoreViewController: UIViewController {
+    // MARK: - Properties
+    private let storeViewModel = StoreViewModel()
+    
+    
     // MARK: - IBOutlets
     @IBOutlet weak var storeTextField: UITextField! {
         didSet {
@@ -37,7 +41,10 @@ class StoreViewController: UIViewController {
     }
     
     func showStoredValue() {
-        storeTextField.text = Store.loadStoredValue()
+        storeViewModel.loadStoredValue { [weak self] value in
+            guard let self = self else { return }
+            self.storeTextField.text = value
+        }
     }
     
     

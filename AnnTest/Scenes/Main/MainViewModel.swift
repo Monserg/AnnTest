@@ -31,5 +31,4 @@ class MainViewModel: MainViewModelType {
         guard let items = photographers else { return nil }
         return items[indexPath.row].download_url
     }
-
 }

@@ -42,7 +42,6 @@ struct Store: Codable {
     
     static func loadStoredValue() -> String? {
         guard let store = Store.load() else { return nil }
-            
         return store.value
     }
 }

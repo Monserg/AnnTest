@@ -25,6 +25,8 @@
 		B1A4EF69255503390051E2CB /* PreviewImage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1A4EF68255503390051E2CB /* PreviewImage.storyboard */; };
 		B1B4075D2556ED9100636744 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B4075C2556ED9100636744 /* MainViewModel.swift */; };
 		B1B407622556EDEB00636744 /* MainViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B407612556EDEB00636744 /* MainViewModelType.swift */; };
+		B1B4076B2556F79000636744 /* StoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B4076A2556F79000636744 /* StoreViewModel.swift */; };
+		B1B4076E2556F79D00636744 /* StoreViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B4076D2556F79D00636744 /* StoreViewModelType.swift */; };
 		B1BDFF7B255644BA00D057CE /* NeyworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BDFF7A255644BA00D057CE /* NeyworkManager.swift */; };
 		B1BDFF7F25564F2600D057CE /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BDFF7E25564F2600D057CE /* UIImageView+Extensions.swift */; };
 /* End PBXBuildFile section */
@@ -50,6 +52,8 @@
 		B1A4EF68255503390051E2CB /* PreviewImage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PreviewImage.storyboard; sourceTree = "<group>"; };
 		B1B4075C2556ED9100636744 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		B1B407612556EDEB00636744 /* MainViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModelType.swift; sourceTree = "<group>"; };
+		B1B4076A2556F79000636744 /* StoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewModel.swift; sourceTree = "<group>"; };
+		B1B4076D2556F79D00636744 /* StoreViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewModelType.swift; sourceTree = "<group>"; };
 		B1BDFF7A255644BA00D057CE /* NeyworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeyworkManager.swift; sourceTree = "<group>"; };
 		B1BDFF7E25564F2600D057CE /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -112,8 +116,8 @@
 			isa = PBXGroup;
 			children = (
 				B1B4075A2556ED7000636744 /* Main */,
-				B1A4EF652555030B0051E2CB /* PreviewImageViewController.swift */,
-				B1A4EF482554825B0051E2CB /* StoreViewController.swift */,
+				B1B407682556F77900636744 /* PreviewImage */,
+				B1B407662556F77200636744 /* Store */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -169,8 +173,26 @@
 			isa = PBXGroup;
 			children = (
 				B1B407612556EDEB00636744 /* MainViewModelType.swift */,
+				B1B4076D2556F79D00636744 /* StoreViewModelType.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		B1B407662556F77200636744 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				B1B4076A2556F79000636744 /* StoreViewModel.swift */,
+				B1A4EF482554825B0051E2CB /* StoreViewController.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		B1B407682556F77900636744 /* PreviewImage */ = {
+			isa = PBXGroup;
+			children = (
+				B1A4EF652555030B0051E2CB /* PreviewImageViewController.swift */,
+			);
+			path = PreviewImage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,9 +274,11 @@
 				B1BDFF7F25564F2600D057CE /* UIImageView+Extensions.swift in Sources */,
 				B1A4EF4E255484640051E2CB /* UIViewController+Extensions.swift in Sources */,
 				B1A4EF5F2554FBA00051E2CB /* Decodable+Extensions.swift in Sources */,
+				B1B4076E2556F79D00636744 /* StoreViewModelType.swift in Sources */,
 				B1A4EF5C2554FA7F0051E2CB /* Responces.swift in Sources */,
 				B1A4EF662555030B0051E2CB /* PreviewImageViewController.swift in Sources */,
 				B1A4EF53255485290051E2CB /* Store.swift in Sources */,
+				B1B4076B2556F79000636744 /* StoreViewModel.swift in Sources */,
 				B1A4EF292554780B0051E2CB /* AppDelegate.swift in Sources */,
 				B1A4EF2B2554780B0051E2CB /* SceneDelegate.swift in Sources */,
 				B1BDFF7B255644BA00D057CE /* NeyworkManager.swift in Sources */,
