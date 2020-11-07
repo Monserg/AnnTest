@@ -9,35 +9,28 @@ import UIKit
 
 class MainViewController: UITableViewController {
     // MARK: - Properties
-    var items: [Photographer]!
-    
-    
-    // MARK: - IBOutlets
+    let mainViewModel = MainViewModel()
     
     
     // MARK: - Class functions
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        hideBackButtonTitle()
         title = "Main"
-        
         loadData()
+        hideBackButtonTitle()
     }
     
     
     // MARK: - Custom functions
     private func loadData() {
-        NetworkManager().getPhotographersCountries() { [weak self] (result, errorDescription) in
-            guard errorDescription == nil else { return }
-            guard let self = self, let items = result as? [Photographer] else { return }
-            
-            self.items = items.sorted { $0.author < $1.author }
+        mainViewModel.fetchPhotographers { [weak self] isSuccess in
+            guard let self = self, isSuccess else { return }
             
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
-        }
+        }        
     }
     
     
@@ -46,7 +39,7 @@ class MainViewController: UITableViewController {
         if segue.identifier == "showPreviewImageVC",
            let previewImageVC = segue.destination as? PreviewImageViewController,
            let indexPath = tableView.indexPathForSelectedRow {
-            previewImageVC.download_url = items[indexPath.row].download_url
+            previewImageVC.download_url = mainViewModel.download_url(byIndexPath: indexPath)
         }
     }
 }
@@ -55,18 +48,12 @@ class MainViewController: UITableViewController {
 // MARK: - UITableViewDataSource
 extension MainViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        items?.count ?? 0
+        mainViewModel.numberOfRowsInSection()
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        cell.textLabel?.text = items?[indexPath.row].author
+        cell.textLabel?.text = "row - " + "\(indexPath.row)" //items?[indexPath.row].author
         return cell
     }
-}
-
-
-// MARK: - UITableViewDelegate
-extension MainViewController {
-    
 }

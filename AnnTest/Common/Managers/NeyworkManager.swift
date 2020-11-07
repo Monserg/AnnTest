@@ -11,7 +11,7 @@ typealias ComplitionHandler = (model: [Decodable]?, error: String?)
 
 struct NetworkManager {
     // MARK: - GET API functions
-    func getPhotographersCountries(completion: @escaping ((ComplitionHandler) -> Void)) {
+    func fetchPhotographers(completion: @escaping ((ComplitionHandler) -> Void)) {
         let url = URL(string: "https://picsum.photos/v2/list")!
         
         let task = URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
