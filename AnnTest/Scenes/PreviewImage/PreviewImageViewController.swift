@@ -6,14 +6,16 @@
 //
 
 import UIKit
+import Combine
 
 class PreviewImageViewController: UIViewController {
     // MARK: - Properties
-    var previewImageViewModel: PreviewImageViewModelType!
-    
+    private var imageSubscriber: AnyCancellable?
+
     
     // MARK: - IBOutlets
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet var previewImageViewModel: PreviewImageViewModel!
     
     
     // MARK: - Class functions
@@ -22,11 +24,18 @@ class PreviewImageViewController: UIViewController {
 
         view.showLoading()
         title = "Image preview"
-        
-        previewImageViewModel.downloadImage(completion: { [weak self] image in
-            guard let self = self else { return }
-            self.imageView.image = image
+
+        bindViewModel()
+        downloadImage()
+    }
+    
+    private func bindViewModel() {
+        imageSubscriber = previewImageViewModel.$image.receive(on: DispatchQueue.main).assign(to: \.image, on: imageView)
+    }
+    
+    private func downloadImage() {
+        previewImageViewModel.downloadImage {
             self.view.stopLoading()
-        })
+        }
     }
 }

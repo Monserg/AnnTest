@@ -6,28 +6,41 @@
 //
 
 import UIKit
+import Combine
 
-class PreviewImageViewModel: PreviewImageViewModelType {
+final class PreviewImageViewModel: ViewModel, PreviewImageViewModelType {    
     // MARK: - Properties
-    private var url: String
+    private var url: URL
+    
+    @Published var image: UIImage?
+    private var cancellable: AnyCancellable?
 
     
     // MARK: - Initialization
     init(withURL url: String) {
-        self.url = url
+        self.url = URL(string: url)!
     }
     
     
-    // MARK: - PreviewImageViewModelTypeprotocol
-    func downloadImage(completion: @escaping ((UIImage?) -> Void)) {
-        guard let url = URL(string: url) else { completion(nil); return }
-        
-        DispatchQueue.global().async {
-            guard let data = try? Data(contentsOf: url) else { completion(nil); return }
-            
-            DispatchQueue.main.async {
-                completion(UIImage(data: data))
+    // MARK: - PreviewImageViewModelType protocol
+    func downloadImage(completion: @escaping (() -> Void)) {
+            let publisher = URLSession.shared.fetchImage(for: url, placeholder: UIImage(named: ""))
+                .receive(on: DispatchQueue.main)
+
+        self.cancellable = publisher.sink(
+            receiveCompletion: { completion in
+                switch completion {
+                case .failure(let error):
+                    print(error.localizedDescription)
+                    
+                case .finished:
+                    break
+                }
+            },
+            receiveValue: { value in
+                self.image = value
+                completion()
             }
-        }
+        )
     }
 }

@@ -6,31 +6,35 @@
 //
 
 import UIKit
+import Combine
 
 class MainViewController: UITableViewController {
     // MARK: - Properties
     private let mainViewModel = MainViewModel()
-    
+    private var photographersSubscriber: AnyCancellable?
+
     
     // MARK: - Class functions
     override func viewDidLoad() {
         super.viewDidLoad()
         
         title = "Main"
-        loadData()
+        bindViewModel()
         hideBackButtonTitle()
+        self.tableView.showLoading()
     }
     
     
     // MARK: - Custom functions
-    private func loadData() {
+    private func bindViewModel() {
         mainViewModel.fetchPhotographers { [weak self] isSuccess in
             guard let self = self, isSuccess else { return }
             
             DispatchQueue.main.async {
                 self.tableView.reloadData()
+                self.tableView.stopLoading()
             }
-        }        
+        }
     }
     
     

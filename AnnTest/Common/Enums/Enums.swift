@@ -10,3 +10,7 @@ import UIKit
 enum UITableViewCellIdentifier: String {
     case customCell = "CustomCell"
 }
+
+enum ResponceError: Error {
+    case invalidResponse
+}

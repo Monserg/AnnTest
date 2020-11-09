@@ -31,9 +31,11 @@
                     </view>
                     <connections>
                         <outlet property="imageView" destination="rm7-0i-4F7" id="vDx-Ab-C6w"/>
+                        <outlet property="previewImageViewModel" destination="ReU-Df-Kab" id="MFg-cw-mmR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lrO-Tv-a9y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <customObject id="ReU-Df-Kab" customClass="ViewModel" customModule="AnnTest" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="262" y="163"/>
         </scene>

@@ -8,5 +8,5 @@
 import UIKit
 
 protocol PreviewImageViewModelType {
-    func downloadImage(completion: @escaping ((UIImage?) -> Void))
+    func downloadImage(completion: @escaping (() -> Void))
 }
